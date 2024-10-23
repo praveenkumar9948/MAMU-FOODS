@@ -1,0 +1,140 @@
+/* confirmation.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.confirmation-container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-out;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+#order-details {
+    text-align: left;
+    opacity: 0;
+    animation: fadeInContent 1.5s ease-in-out forwards;
+    font-size: 1.1em;
+}
+
+#order-details p {
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.6;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#order-details p:hover {
+    color: #333;
+    transform: translateX(10px);
+}
+
+#order-details h3 {
+    font-size: 1.6em;
+    color: #333;
+    opacity: 0;
+    animation: fadeInContent 2s ease-in-out forwards;
+    margin-top: 30px;
+}
+
+strong {
+    color: #000;
+}
+
+p {
+    margin: 8px 0;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .confirmation-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    #order-details p {
+        font-size: 1em;
+    }
+
+    #order-details h3 {
+        font-size: 1.4em;
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+body {
+    background: rgba(255, 255, 255, 0.5) url('./images/2b8d3481fd0855dfb0608f3198fd8adc.jpg') no-repeat center/cover;
+}
+
+
+.billing-container {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Gradient for depth */
+    padding: 20px;
+    border-radius: 12px; /* Slightly increased border radius */
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), /* Right and bottom shadow */
+                -8px -8px 15px rgba(255, 255, 255, 0.7); /* Left and top highlight */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.billing-container:hover {
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.25), /* Darker shadow on hover */
+                -12px -12px 20px rgba(255, 255, 255, 0.9); /* Lighter highlight on hover */
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333; /* Darker text for better contrast */
+}
+
+#billing-details {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #555; /* Slightly lighter gray for labels */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px; /* Increased padding for better touch targets */
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Lighter border for a softer look */
+    border-radius: 4px;
+    transition: border-color 0.3s; /* Transition for border color on focus */
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), /* Inner shadow for depth */
+                inset -4px -4px 8px rgba(255, 255, 255, 0.7); /* Inner highlight for depth */
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none; /* Remove default outline */
+}
+
+#place-order-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transition for hover effect */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), /* Shadow for depth */
+                -4px -4px 8px rgba(255, 255, 255, 0.8); /* Highlight for depth */
+}
+
+#place-order-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+} 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+    <div class="confirmation-container">
+        <h2>Order Confirmation</h2>
+        <div id="order-details"></div>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const regex = /([^&=]+)=([^&]*)/g;
+            let m;
+
+            while (m = regex.exec(queryString)) {
+                params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+            return params;
+        }
+
+        function displayOrderDetails() {
+            const params = getQueryParams();
+            const { item, price, name, address, city, postal, country } = params;
+
+            console.log(params); // Log params to see what was passed
+
+            document.getElementById('order-details').innerHTML = `
+                <p><strong>Item:</strong> ${item || 'N/A'}</p>
+                <p><strong>Price:</strong> $${parseFloat(price).toFixed(2) || 'N/A'}</p>
+                <h3>Shipping Address</h3>
+                <p><strong>Name:</strong> ${name || 'N/A'}</p>
+                <p><strong>Address:</strong> ${address || 'N/A'}</p>
+                <p><strong>City:</strong> ${city || 'N/A'}</p>
+                <p><strong>Postal Code:</strong> ${postal || 'N/A'}</p>
+                <p><strong>Country:</strong> ${country || 'N/A'}</p>
+            `;
+        }
+
+        displayOrderDetails();
+    </script>
+
+</body>
+</html>
